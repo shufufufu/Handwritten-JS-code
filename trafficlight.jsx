@@ -13,10 +13,12 @@ function yellow(){
 const light= (timer,callback) =>{
     return new Promise(
         (resolve)=>setTimeout(
-            callback(),
-            resolve()
+            ()=>{
+                callback(),
+                resolve()
+            }
         ,timer
-        ))
+    ))
 }
 
 
